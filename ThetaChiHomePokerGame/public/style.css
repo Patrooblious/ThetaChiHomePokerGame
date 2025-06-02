@@ -1,0 +1,242 @@
+/* style.css */
+
+:root {
+    --military-red: #800000;
+    --gold: #FFD700;
+    --white: #FFFFFF;
+}
+
+/* Global Reset & Layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: var(--white);
+    color: var(--military-red);
+}
+
+a {
+    color: var(--military-red);
+    text-decoration: none;
+}
+
+    a:hover {
+        color: var(--gold);
+    }
+
+/* Header */
+header {
+    background: var(--military-red);
+    color: var(--white);
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: var(--white);
+    font-weight: bold;
+}
+
+    nav a:hover {
+        color: var(--gold);
+    }
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--gold);
+    color: var(--military-red);
+}
+
+    .hero h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+        margin-bottom: 1rem;
+    }
+
+.cta-buttons .button {
+    background: var(--military-red);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+    .cta-buttons .button:hover {
+        background: var(--white);
+        color: var(--military-red);
+        border: 2px solid var(--military-red);
+    }
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    justify-content: center;
+    background: #f9f9f9;
+}
+
+.feature {
+    flex: 1 1 250px;
+    background: var(--white);
+    border: 2px solid var(--military-red);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+    .feature h3 {
+        color: var(--military-red);
+    }
+
+    .feature p {
+        margin-bottom: 0.5rem;
+    }
+
+    .feature .link {
+        color: var(--military-red);
+        font-weight: bold;
+    }
+
+        .feature .link:hover {
+            color: var(--gold);
+        }
+
+/* Updates & Download Section */
+.updates, .download-pdf {
+    padding: 1.5rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.updates {
+    background: rgba(128, 0, 0, 0.1);
+    border-left: 5px solid var(--military-red);
+    border-radius: 0.25rem;
+}
+
+    .updates h3 {
+        color: var(--military-red);
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .updates ul {
+        margin-left: 1.5rem;
+    }
+
+        .updates ul li {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+.download-pdf h3 {
+    color: var(--military-red);
+    margin-bottom: 0.5rem;
+}
+
+.download-pdf p {
+    margin-left: 1.5rem;
+}
+
+.download-pdf .link {
+    color: var(--military-red);
+    font-weight: bold;
+}
+
+/* Content Sections */
+main section {
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+main h2, main h3 {
+    color: var(--military-red);
+    margin-top: 1rem;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+}
+
+    ul li, ol li {
+        margin-bottom: 0.5rem;
+    }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--military-red);
+    color: var(--white);
+}
+
+    footer a {
+        color: var(--white);
+    }
+
+        footer a:hover {
+            color: var(--gold);
+        }
+
+/* Hand Rankings Grid (for hand-rankings.html) */
+.hands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hand {
+    background: var(--white);
+    border: 2px solid var(--military-red);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+    .hand h2 {
+        color: var(--military-red);
+        margin-bottom: 0.5rem;
+    }
+
+    .hand p {
+        margin-bottom: 0.5rem;
+    }
+
+.hand-visual img {
+    width: 50px;
+    margin: 0.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .button {
+        display: block;
+        margin: 0.5rem auto;
+    }
+}

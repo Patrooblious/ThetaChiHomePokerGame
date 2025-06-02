@@ -1,0 +1,61 @@
+<!-- gameplay.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup & Gameplay - Pat’s Home Poker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Setup & Gameplay</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hand-rankings.html">Hand Rankings</a></li>
+                <li><a href="gameplay.html">Setup & Gameplay</a></li>
+                <li><a href="house-rules.html">House Rules</a></li>
+                <li><a href="bonus-rules.html">Bonus Game Rules</a></li>
+                <li><a href="etiquette.html">Etiquette</a></li>
+                <li><a href="poker-terms.html">Poker Terms</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="setup">
+            <h2>Setup</h2>
+            <ul>
+                <li><strong>Players:</strong> 2–8 players</li>
+                <li><strong>Deck:</strong> Standard 52-card deck (no jokers), shuffled each hand</li>
+                <li><strong>Blinds:</strong> Small Blind = $0.25; Big Blind = $0.50; rotate clockwise after each hand</li>
+                <li><strong>Chips:</strong> Denominations: $0.25, $1, $5; buy-in range: $10–$100</li>
+                <li><strong>Dealer Button:</strong> Use a marker to track Dealer; moves one seat clockwise each hand</li>
+            </ul>
+        </section>
+        <section id="gameplay">
+            <h2>Gameplay</h2>
+            <h3>The Deal</h3>
+            <p>Dealer shuffles and deals two hole cards to each player, starting left of Dealer clockwise. If a card is exposed, misdeal and reshuffle. To speed up, use two decks: small blind shuffles, big blind cuts the other.</p>
+            <h3>Betting Rounds</h3>
+            <ol>
+                <li><strong>Pre-Flop:</strong> After blinds, each player may Fold, Call, or Raise (min raise = $0.25).</li>
+                <li><strong>Flop:</strong> Burn one card; deal three community cards face-up; betting starts left of Dealer.</li>
+                <li><strong>Turn:</strong> Burn one card; deal fourth community card; another betting round.</li>
+                <li><strong>River:</strong> Burn one card; deal fifth community card; final betting round.</li>
+            </ol>
+            <h3>Showdown & Ties</h3>
+            <p>Remaining players reveal hands; last aggressor on River shows first. If no River bet, reveal starts left of Dealer. Higher five-card hand wins; ties split pot & odd chip to left of Dealer. Suit ranking (for non-monetary ties): Spades > Hearts > Diamonds > Clubs.</p>
+        </section>
+        <section id="betting-structure">
+            <h2>Betting Structure</h2>
+            <ul>
+                <li><strong>No-Limit:</strong> Players may bet any amount up to their stack.</li>
+                <li><strong>Minimum Raise:</strong> Equal to previous bet/raise (e.g., raise to $1, min raise $1).</li>
+                <li><strong>All-In & Side Pots:</strong> All-ins create side pots; all-in player eligible only for main pot.</li>
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

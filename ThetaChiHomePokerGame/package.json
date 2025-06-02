@@ -1,0 +1,15 @@
+{
+    "name": "ThetaChiHomePokerGame",
+    "version": "1.0.0",
+    "description": "Pat’s home poker site",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    },
+    "devDependencies": {
+        "eslint": "^9.27.0"
+    }
+}
