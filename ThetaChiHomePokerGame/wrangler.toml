@@ -1,11 +1,9 @@
+# wrangler.toml (at the projectâ€™s root, next to package.json)
+
 name = "theta-chi-home-poker-game"
 compatibility_date = "2025-06-02"
-type = "javascript"       # or "rust" / “typescript” if you were deploying a Worker—but we’re only hosting static files
-
-[build]
-# If you need a build step (e.g. bundling), you can specify a command here.
-# For a simple static folder you can leave this empty or omit it entirely.
+type = "javascript"
 
 [site]
-  bucket = "./public"     # <--- point this at the folder containing index.html, etc.
-  entry-point = ""        # <--- for a pure site, you can leave entry-point blank
+bucket = "./public"       # â† point to your static folder
+entry-point = ""          # â† leave blank for a pureâ€static site
