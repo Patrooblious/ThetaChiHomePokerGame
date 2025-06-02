@@ -1,0 +1,9 @@
+﻿# wrangler.toml (at the project’s root, next to package.json)
+
+name = "theta-chi-home-poker-game"
+compatibility_date = "2025-06-02"
+type = "javascript"
+
+[site]
+bucket = "./public"       # ← point to your static folder
+entry-point = ""          # ← leave blank for a pure‐static site
