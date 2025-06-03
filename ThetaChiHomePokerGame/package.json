@@ -1,15 +1,18 @@
 {
     "name": "ThetaChiHomePokerGame",
     "version": "1.0.0",
-    "description": "Pat’s home poker site",
-    "main": "app.js",
+    "description": "",
+    "main": "script.js",
     "scripts": {
-        "start": "node app.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "fingerprint": "node build-scripts/fingerprint.js"
     },
-    "dependencies": {
-        "express": "^4.18.2"
-    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
     "devDependencies": {
-        "eslint": "^9.27.0"
+        "fs-extra": "^11.3.0",
+        "rev-hash": "^4.1.0"
     }
 }
+

@@ -1,0 +1,6 @@
+# Fingerprinted CSS & JS: cache for one year, never revalidate
+/style.*.css
+  Cache-Control: max-age=31536000, immutable
+
+/script.*.js
+  Cache-Control: max-age=31536000, immutable
