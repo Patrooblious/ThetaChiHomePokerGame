@@ -442,13 +442,9 @@ footer {
    Two‐column layout for Poker Terms page
    ───────────────────────────────────────────────────────── */
     .page-poker-terms ul {
-        /* Tell the browser to flow list items into two columns */
         column-count: 2;
-        /* Add some gap between the columns */
         column-gap: 2rem;
-        /* Optional: balance column heights */
         column-fill: balance;
-        /* Remove the default list indentation in each column */
         padding-left: 0;
     }
 
