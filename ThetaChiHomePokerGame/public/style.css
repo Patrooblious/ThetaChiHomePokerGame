@@ -6,7 +6,6 @@
     --white: #FFFFFF;
 }
 
-/* Global Reset & Layout */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -24,7 +23,6 @@ a {
         color: var(--gold);
     }
 
-/* Header */
 header {
     background: var(--military-red);
     color: var(--white);
@@ -48,7 +46,6 @@ nav a {
         color: var(--gold);
     }
 
-/* Hero Section */
 .hero {
     text-align: center;
     padding: 2rem 1rem;
@@ -81,7 +78,6 @@ nav a {
         border: 2px solid var(--military-red);
     }
 
-/* Features Section */
 .features {
     display: flex;
     flex-wrap: wrap;
@@ -117,7 +113,6 @@ nav a {
             color: var(--gold);
         }
 
-/* Updates & Download Section */
 .updates, .download-pdf {
     padding: 1.5rem 1rem;
     max-width: 800px;
@@ -160,7 +155,6 @@ nav a {
     font-weight: bold;
 }
 
-/* Content Sections */
 main section {
     padding: 1rem;
     max-width: 900px;
@@ -180,7 +174,6 @@ ul, ol {
         margin-bottom: 0.5rem;
     }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
@@ -200,9 +193,6 @@ footer {
 /* Hand Rankings Grid (Option B: centered 2 on top, then 2 rows of 4) */
 .hands-grid {
     display: grid;
-    /* Row 1: blank, rf, sf, blank */
-    /* Row 2: fo, fk, fh, fl */
-    /* Row 3: ft, sk, tp, hc */
     grid-template-areas:
         ".    rf  sf  ."
         "fo   fk  fh  fl"
