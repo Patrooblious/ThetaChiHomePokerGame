@@ -1,4 +1,4 @@
-/* style.css */
+﻿/* style.css */
 
 :root {
     --military-red: #800000;
@@ -196,18 +196,82 @@ footer {
             color: var(--gold);
         }
 
-/* Hand Rankings Grid (for hand-rankings.html) */
+
+/* Hand Rankings Grid (Option B: centered 2 on top, then 2 rows of 4) */
 .hands-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Row 1: blank, rf, sf, blank */
+    /* Row 2: fo, fk, fh, fl */
+    /* Row 3: ft, sk, tp, hc */
+    grid-template-areas:
+        ".    rf  sf  ."
+        "fo   fk  fh  fl"
+        "ft   sk  tp  hc";
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     padding: 1rem;
     max-width: 1000px;
     margin: 0 auto;
 }
 
+/* Map each “hand-…” class to its grid area: */
+.hand-royal {
+    grid-area: rf;
+}
+
+.hand-straight-flush {
+    grid-area: sf;
+}
+
+.hand-four-kind {
+    grid-area: fo;
+}
+
+.hand-full-house {
+    grid-area: fk;
+}
+
+.hand-flush {
+    grid-area: fh;
+}
+
+.hand-straight {
+    grid-area: fl;
+}
+
+.hand-three-kind {
+    grid-area: ft;
+}
+
+.hand-two-pair {
+    grid-area: sk;
+}
+
+.hand-one-pair {
+    grid-area: tp;
+}
+
+.hand-high-card {
+    grid-area: hc;
+}
+
+/* Responsive fallback: disable named areas on small screens */
+@media (max-width: 700px) {
+    .hands-grid {
+        grid-template-areas: none;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .hands-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 .hand {
-    background: var(--white);
+    background: #fdf5e6;
     border: 2px solid var(--military-red);
     border-radius: 0.5rem;
     padding: 0.75rem;
@@ -240,3 +304,158 @@ footer {
         margin: 0.5rem auto;
     }
 }
+
+/* ─────────────────────────────────────────────────────────
+   Page‐specific typography for gameplay.html
+   ───────────────────────────────────────────────────────── */
+.page-gameplay {
+    /* (Optional) override base font-size for this page’s body: */
+    /* font-size: 1rem; */
+}
+
+    /* Make main <h1> on gameplay slightly larger */
+    .page-gameplay h1 {
+        font-size: 2.25rem; /* ~36px */
+        margin-bottom: 0.5rem;
+    }
+
+    /* Tweak <h2> inside Setup & Gameplay */
+    .page-gameplay h2 {
+        font-size: 2.5rem; /* ~28px */
+        margin-top: 1rem;
+    }
+
+    /* Slightly shrink regular paragraphs and list text */
+    .page-gameplay p,
+    .page-gameplay li {
+        font-size: 1.25rem; /* ~15px */
+        line-height: 1.4;
+    }
+
+    /* Give sub‐headings (h3) a modest size */
+    .page-gameplay h3 {
+        font-size: 1.4rem; /* ~22px */
+        margin-top: 1rem;
+    }
+
+/* ─────────────────────────────────────────────────────────
+   Page-specific typography adjustments for house-rules.html
+   ───────────────────────────────────────────────────────── */
+
+.page-house-rules {
+    /* If you want a different base font-size on this page: */
+    /* font-size: 1rem;      /* default is ~16px; override if desired */
+}
+
+    /* Enlarge the main <h1> on House Rules */
+    .page-house-rules h1 {
+        font-size: 2.25rem; /* ~36px instead of default */
+        margin-bottom: 0.5rem;
+    }
+
+    /* Make list items a bit smaller for readability */
+    .page-house-rules ul li {
+        font-size: 1rem; /* ~15px */
+        line-height: 1.4; /* a bit tighter line height */
+    }
+
+        /* If you want the <strong> labels (“No Phones:”, etc.) slightly smaller */
+        .page-house-rules ul li strong {
+            font-size: 1.25rem; /* ~16px */
+        }
+
+    /* Change paragraph (if any) or <p> inside this page */
+    .page-house-rules p {
+        font-size: 1rem; /* ~16px */
+        margin-bottom: 1rem;
+    }
+
+    /* Tweak navigation font just on House Rules page */
+    .page-house-rules nav a {
+        font-size: 0.95rem; /* ~15px */
+    }
+
+
+/* ─────────────────────────────────────────────────────────
+   Page‐specific typography for bonus-rules.html
+   ───────────────────────────────────────────────────────── */
+.page-bonus-rules {
+    /* font-size: 1rem;  /* default, change if needed */ */
+}
+
+    .page-bonus-rules h1 {
+        font-size: 2rem; /* ~32px */
+    }
+
+    .page-bonus-rules ul li {
+        font-size: 1.25rem; /* ~14px */
+        line-height: 1.4;
+    }
+
+        .page-bonus-rules ul li strong {
+            font-size: 1.5rem; /* 16px */
+        }
+
+
+/* ─────────────────────────────────────────────────────────
+   Page‐specific typography for etiquette.html
+   ───────────────────────────────────────────────────────── */
+.page-etiquette {
+    /* font-size: 1rem; */
+}
+
+    .page-etiquette h1 {
+        font-size: 2.25rem; /* ~36px */
+    }
+
+    .page-etiquette ul li {
+        font-size: 1rem; /* ~15px */
+        line-height: 1.4;
+    }
+
+        .page-etiquette ul li strong {
+            font-size: 1.25rem; /* 16px */
+        }
+
+
+/* ─────────────────────────────────────────────────────────
+   Page‐specific typography for poker-terms.html
+   ───────────────────────────────────────────────────────── */
+.page-poker-terms {
+    /* font-size: 1rem; */
+}
+
+    .page-poker-terms h1 {
+        font-size: 2rem; /* ~32px */
+    }
+
+    .page-poker-terms ul li {
+        font-size: 1rem; /* ~14px */
+        line-height: 1.4;
+    }
+
+        .page-poker-terms ul li strong {
+            font-size: 1.25rem; /* 16px */
+        }
+
+    /* ─────────────────────────────────────────────────────────
+   Two‐column layout for Poker Terms page
+   ───────────────────────────────────────────────────────── */
+    .page-poker-terms ul {
+        /* Tell the browser to flow list items into two columns */
+        column-count: 2;
+        /* Add some gap between the columns */
+        column-gap: 2rem;
+        /* Optional: balance column heights */
+        column-fill: balance;
+        /* Remove the default list indentation in each column */
+        padding-left: 0;
+    }
+
+        .page-poker-terms ul li {
+            /* Restore the bullet and a bit of left padding */
+            list-style-position: inside;
+            padding-left: 0.5rem;
+            /* Keep line‐height comfortable */
+            line-height: 1.4;
+        }
