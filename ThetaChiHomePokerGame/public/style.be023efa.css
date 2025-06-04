@@ -189,8 +189,6 @@ footer {
             color: var(--gold);
         }
 
-
-/* Hand Rankings Grid (Option B: centered 2 on top, then 2 rows of 4) */
 .hands-grid {
     display: grid;
     grid-template-areas:
@@ -200,7 +198,8 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     padding: 1rem;
-    max-width: 1000px;
+    max-width: 100%;
+    box-sizing: border-box;
     margin: 0 auto;
 }
 
@@ -282,7 +281,6 @@ footer {
     margin: 0.25rem;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 600px) {
     .features {
         flex-direction: column;
@@ -303,26 +301,22 @@ footer {
     /* font-size: 1rem; */
 }
 
-    /* Make main <h1> on gameplay slightly larger */
     .page-gameplay h1 {
-        font-size: 2.25rem; /* ~36px */
+        font-size: 2.25rem;
         margin-bottom: 0.5rem;
     }
 
-    /* Tweak <h2> inside Setup & Gameplay */
     .page-gameplay h2 {
         font-size: 2.5rem; /* ~28px */
         margin-top: 1rem;
     }
 
-    /* Slightly shrink regular paragraphs and list text */
     .page-gameplay p,
     .page-gameplay li {
         font-size: 1.25rem; /* ~15px */
         line-height: 1.4;
     }
 
-    /* Give sub‐headings (h3) a modest size */
     .page-gameplay h3 {
         font-size: 1.4rem; /* ~22px */
         margin-top: 1rem;
@@ -337,30 +331,25 @@ footer {
     /* font-size: 1rem;      /* default is ~16px; override if desired */
 }
 
-    /* Enlarge the main <h1> on House Rules */
     .page-house-rules h1 {
         font-size: 2.25rem; /* ~36px instead of default */
         margin-bottom: 0.5rem;
     }
 
-    /* Make list items a bit smaller for readability */
     .page-house-rules ul li {
         font-size: 1rem; /* ~15px */
         line-height: 1.4; /* a bit tighter line height */
     }
 
-        /* If you want the <strong> labels (“No Phones:”, etc.) slightly smaller */
         .page-house-rules ul li strong {
             font-size: 1.25rem; /* ~16px */
         }
 
-    /* Change paragraph (if any) or <p> inside this page */
     .page-house-rules p {
         font-size: 1rem; /* ~16px */
         margin-bottom: 1rem;
     }
 
-    /* Tweak navigation font just on House Rules page */
     .page-house-rules nav a {
         font-size: 0.95rem; /* ~15px */
     }
@@ -412,20 +401,19 @@ footer {
    Page‐specific typography for poker-terms.html
    ───────────────────────────────────────────────────────── */
 .page-poker-terms {
-    /* font-size: 1rem; */
 }
 
     .page-poker-terms h1 {
-        font-size: 2rem; /* ~32px */
+        font-size: 2rem;
     }
 
     .page-poker-terms ul li {
-        font-size: 1rem; /* ~14px */
+        font-size: 1rem;
         line-height: 1.4;
     }
 
         .page-poker-terms ul li strong {
-            font-size: 1.25rem; /* 16px */
+            font-size: 1.25rem;
         }
 
     /* ─────────────────────────────────────────────────────────cd p
@@ -439,10 +427,8 @@ footer {
     }
 
         .page-poker-terms ul li {
-            /* Restore the bullet and a bit of left padding */
             list-style-position: inside;
             padding-left: 0.5rem;
-            /* Keep line‐height comfortable */
             line-height: 1.4;
         }
 
@@ -463,8 +449,8 @@ html, body {
 
 nav ul {
     display: flex;
-    flex-wrap: wrap; /* allow links to break onto new line */
-    gap: 0.5rem; /* smaller gap on mobile */
+    flex-wrap: wrap;
+    gap: 0.5rem;
     padding: 0;
     margin: 0;
 }
