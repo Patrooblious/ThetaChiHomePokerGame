@@ -33,10 +33,10 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -202,6 +202,47 @@ footer {
     padding: 1rem;
     max-width: 1000px;
     margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.hand-royal {
+    grid-area: rf;
+}
+
+.hand-straight-flush {
+    grid-area: sf;
+}
+
+.hand-four-kind {
+    grid-area: fo;
+}
+
+.hand-full-house {
+    grid-area: fk;
+}
+
+.hand-flush {
+    grid-area: fh;
+}
+
+.hand-straight {
+    grid-area: fl;
+}
+
+.hand-three-kind {
+    grid-area: ft;
+}
+
+.hand-two-pair {
+    grid-area: sk;
+}
+
+.hand-one-pair {
+    grid-area: tp;
+}
+
+.hand-high-card {
+    grid-area: hc;
 }
 
 @media (max-width: 800px) {
@@ -215,7 +256,6 @@ footer {
     .hands-grid {
         grid-template-columns: 1fr;
     }
-}
 }
 
 .hand {
@@ -236,16 +276,10 @@ footer {
     }
 
 .hand-visual img {
-    max-width: 100%;
     width: 50px;
-    height: auto;
     margin: 0.25rem;
-}
-
-@media (max-width: 400px) {
-    .hand-visual img {
-        width: 40px;
-    }
+    max-width: 100%;
+    height: auto;
 }
 
 @media (max-width: 600px) {
@@ -284,10 +318,10 @@ footer {
     }
 }
 
-/* Typography overrides */
 .page-gameplay h1,
 .page-house-rules h1,
-.page-etiquette h1 {
+.page-etiquette h1,
+.page-poker-terms h1 {
     font-size: 2.25rem;
     margin-bottom: 0.5rem;
 }
@@ -304,6 +338,7 @@ footer {
 
 .page-gameplay p,
 .page-gameplay li,
+.page-bonus-rules ul li,
 .page-house-rules ul li,
 .page-etiquette ul li,
 .page-poker-terms ul li {
@@ -317,8 +352,3 @@ footer {
     .page-poker-terms ul li strong {
         font-size: 1.5rem;
     }
-
-.page-bonus-rules h1,
-.page-poker-terms h1 {
-    font-size: 2rem;
-}
