@@ -245,7 +245,15 @@ footer {
     grid-area: hc;
 }
 
+.hand-one-pair {
+    grid-area: tp;
+}
+
 @media (max-width: 800px) {
+    .hand-one-pair {
+        grid-area: op;
+    }
+
     .hands-grid {
         grid-template-areas:
             "rf sf"
@@ -257,41 +265,6 @@ footer {
     }
 }
 
-.hand-royal {
-    grid-area: rf;
-}
-
-.hand-straight-flush {
-    grid-area: sf;
-}
-
-.hand-full-house {
-    grid-area: fk;
-}
-
-.hand-flush {
-    grid-area: fh;
-}
-
-.hand-straight {
-    grid-area: fl;
-}
-
-.hand-three-kind {
-    grid-area: ft;
-}
-
-.hand-two-pair {
-    grid-area: tp;
-}
-
-.hand-one-pair {
-    grid-area: op;
-}
-
-.hand-high-card {
-    grid-area: hc;
-}
 
 @media (max-width: 400px) {
     .hands-grid {
