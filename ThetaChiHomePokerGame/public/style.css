@@ -458,13 +458,13 @@ footer {
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* no horizontal scrollbar ever */
+    overflow-x: hidden;
 }
 
 nav ul {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-wrap: wrap; /* allow links to break onto new line */
+    gap: 0.5rem; /* smaller gap on mobile */
     padding: 0;
     margin: 0;
 }
