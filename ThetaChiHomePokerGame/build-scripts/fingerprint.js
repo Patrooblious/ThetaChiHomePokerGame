@@ -37,8 +37,8 @@ const path = require('path');
             }
 
             const hash = await computeHash(absPath);
-            const dirname = path.dirname(src);     // "public"
-            const base = path.basename(src, ext);  // "style" or "script"
+            const dirname = path.dirname(src);
+            const base = path.basename(src, ext);
             const newName = `${base}.${hash}${ext}`;
             const newPath = path.join(dirname, newName);
 
@@ -56,7 +56,10 @@ const path = require('path');
             let contents = await fs.readFile(htmlPath, 'utf8');
 
             for (const [orig, hashed] of Object.entries(fingerprintMap)) {
-                const regex = new RegExp(`(href|src)=["']${orig}["']`, 'g');
+                const base = orig.split('.')[0];
+                const ext = orig.split('.')[1];
+
+                const regex = new RegExp(`(href|src)=["']${base}(\\.[a-f0-9]{8})?\\.${ext}["']`, 'g');
                 contents = contents.replace(regex, `$1="${hashed}"`);
             }
 
@@ -65,7 +68,6 @@ const path = require('path');
 
         const cssFiles = await listPublicFilesWithExtension('.css');
         for (const fname of cssFiles) {
-
             if (fname !== fingerprintMap['style.css']) {
                 await fs.remove(path.join('public', fname));
                 console.log(`🗑️  Removed old CSS: ${fname}`);
