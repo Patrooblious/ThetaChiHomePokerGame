@@ -193,25 +193,29 @@ footer {
 
 .hands-grid {
     display: grid;
+    grid-template-areas:
+        ".    rf  sf  ."
+        "fo   fk  fh  fl"
+        "ft   sk  tp  hc";
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     padding: 1rem;
-    max-width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
 }
 
 @media (max-width: 800px) {
     .hands-grid {
+        grid-template-areas: none;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
     .hands-grid {
         grid-template-columns: 1fr;
     }
+}
 }
 
 .hand {
