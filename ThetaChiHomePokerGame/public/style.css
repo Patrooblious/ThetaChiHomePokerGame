@@ -246,10 +246,6 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .hand-one-pair {
-        grid-area: op;
-    }
-
     .hands-grid {
         grid-template-areas:
             "rf sf"
@@ -258,6 +254,10 @@ footer {
             "ft sk"
             "tp hc";
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hand-one-pair {
+        grid-area: tp;
     }
 }
 
