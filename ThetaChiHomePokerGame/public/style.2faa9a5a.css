@@ -247,9 +247,14 @@ footer {
 
 @media (max-width: 800px) {
     .hands-grid {
-        grid-template-areas: none;
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
+
+    .hands-grid > .hand {
+        grid-area: auto !important;
+     }
 }
 
 @media (max-width: 400px) {
