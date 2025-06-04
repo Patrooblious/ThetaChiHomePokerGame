@@ -1,13 +1,19 @@
-﻿/* style.css */
-
-:root {
+﻿:root {
     --military-red: #800000;
     --gold: #FFD700;
     --white: #FFFFFF;
 }
 
-body {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background: var(--white);
@@ -33,10 +39,10 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap;
 }
 
 nav a {
@@ -134,14 +140,10 @@ nav a {
         font-weight: bold;
     }
 
-    .updates ul {
-        margin-left: 1.5rem;
+    .updates ul li {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
     }
-
-        .updates ul li {
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
 
 .download-pdf h3 {
     color: var(--military-red);
@@ -191,6 +193,7 @@ footer {
             color: var(--gold);
         }
 
+/* Hand Rankings Grid */
 .hands-grid {
     display: grid;
     grid-template-areas:
@@ -202,7 +205,33 @@ footer {
     padding: 1rem;
     max-width: 1000px;
     margin: 0 auto;
+    align-items: start;
+}
+
+.hand {
+    background: #fdf5e6;
+    border: 2px solid var(--military-red);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
+    width: 100%;
     box-sizing: border-box;
+}
+
+    .hand h2 {
+        color: var(--military-red);
+        margin-bottom: 0.5rem;
+    }
+
+    .hand p {
+        margin-bottom: 0.5rem;
+    }
+
+.hand-visual img {
+    width: 50px;
+    max-width: 100%;
+    height: auto;
+    margin: 0.25rem;
 }
 
 .hand-royal {
@@ -245,6 +274,7 @@ footer {
     grid-area: hc;
 }
 
+/* Responsive */
 @media (max-width: 800px) {
     .hands-grid {
         grid-template-areas:
@@ -255,40 +285,6 @@ footer {
             "tp hc";
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .hand-one-pair {
-        grid-area: tp;
-    }
-}
-
-@media (max-width: 400px) {
-    .hands-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.hand {
-    background: #fdf5e6;
-    border: 2px solid var(--military-red);
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    text-align: center;
-}
-
-    .hand h2 {
-        color: var(--military-red);
-        margin-bottom: 0.5rem;
-    }
-
-    .hand p {
-        margin-bottom: 0.5rem;
-    }
-
-.hand-visual img {
-    width: 50px;
-    margin: 0.25rem;
-    max-width: 100%;
-    height: auto;
 }
 
 @media (max-width: 600px) {
@@ -306,10 +302,11 @@ footer {
     .page-bonus-rules ul,
     .page-etiquette ul,
     .page-poker-terms ul {
-        margin-left: 1rem;
         padding-left: 1rem;
-        column-count: 1;
+        margin-left: 0;
+        list-style-position: outside;
         text-align: left;
+        column-count: 1;
     }
 
         .page-house-rules ul li,
@@ -317,16 +314,19 @@ footer {
         .page-etiquette ul li,
         .page-poker-terms ul li {
             text-align: left;
-            padding-left: 0.5rem;
-            list-style-position: outside;
+            padding-left: 0;
         }
 
-    .page-poker-terms ul {
-        column-count: 1;
-        column-gap: 0;
+    .hands-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hand-visual img {
+        width: 40px;
     }
 }
 
+/* Typography */
 .page-gameplay h1,
 .page-house-rules h1,
 .page-etiquette h1,
