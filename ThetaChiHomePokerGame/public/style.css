@@ -252,7 +252,7 @@ footer {
             "fk fh"
             "fl ft"
             "sk tp"
-            "tp hc";
+            "op hc";
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -286,7 +286,7 @@ footer {
 }
 
 .hand-one-pair {
-    grid-area: sk;
+    grid-area: op;
 }
 
 .hand-high-card {
