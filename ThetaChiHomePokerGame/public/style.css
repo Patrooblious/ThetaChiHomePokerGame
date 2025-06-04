@@ -199,6 +199,7 @@ footer {
     gap: 1rem;
     padding: 1rem;
     max-width: 100%;
+    min-width: 0;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -496,4 +497,25 @@ nav ul {
 
 body {
     padding-bottom: 4rem;
+}
+
+@media (max-width: 600px) {
+    .page-house-rules ul,
+    .page-bonus-rules ul,
+    .page-etiquette ul,
+    .page-poker-terms ul {
+        margin-left: 1rem;
+        padding-left: 1rem;
+        column-count: 1;
+        text-align: left;
+    }
+
+        .page-house-rules ul li,
+        .page-bonus-rules ul li,
+        .page-etiquette ul li,
+        .page-poker-terms ul li {
+            text-align: left;
+            padding-left: 0.5rem;
+            list-style-position: outside;
+        }
 }
