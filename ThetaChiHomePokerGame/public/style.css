@@ -245,116 +245,6 @@ footer {
     grid-area: hc;
 }
 
-.hands-grid {
-    display: grid;
-    grid-template-areas:
-        ".    rf  sf  ."
-        "fo   fk  fh  fl"
-        "ft   sk  tp  hc";
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-.hand-royal {
-    grid-area: rf;
-}
-
-.hand-straight-flush {
-    grid-area: sf;
-}
-
-.hand-four-kind {
-    grid-area: fo;
-}
-
-.hand-full-house {
-    grid-area: fk;
-}
-
-.hand-flush {
-    grid-area: fh;
-}
-
-.hand-straight {
-    grid-area: fl;
-}
-
-.hand-three-kind {
-    grid-area: ft;
-}
-
-.hand-two-pair {
-    grid-area: sk;
-}
-
-.hand-one-pair {
-    grid-area: tp;
-}
-
-.hand-high-card {
-    grid-area: hc;
-}
-
-/* Only the affected section shown below for brevity */
-
-.hands-grid {
-    display: grid;
-    grid-template-areas:
-        ".    rf  sf  ."
-        "fo   fk  fh  fl"
-        "ft   sk  tp  hc";
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-.hand-royal {
-    grid-area: rf;
-}
-
-.hand-straight-flush {
-    grid-area: sf;
-}
-
-.hand-four-kind {
-    grid-area: fo;
-}
-
-.hand-full-house {
-    grid-area: fk;
-}
-
-.hand-flush {
-    grid-area: fh;
-}
-
-.hand-straight {
-    grid-area: fl;
-}
-
-.hand-three-kind {
-    grid-area: ft;
-}
-
-.hand-two-pair {
-    grid-area: sk;
-}
-
-.hand-one-pair {
-    grid-area: op;
-}
-
-.hand-high-card {
-    grid-area: hc;
-}
-
 @media (max-width: 800px) {
     .hands-grid {
         grid-template-areas:
@@ -362,19 +252,52 @@ footer {
             "fk fh"
             "fl ft"
             "sk tp"
-            "op hc";
+            "tp hc";
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.hand-royal {
+    grid-area: rf;
+}
+
+.hand-straight-flush {
+    grid-area: sf;
+}
+
+.hand-full-house {
+    grid-area: fk;
+}
+
+.hand-flush {
+    grid-area: fh;
+}
+
+.hand-straight {
+    grid-area: fl;
+}
+
+.hand-three-kind {
+    grid-area: ft;
+}
+
+.hand-two-pair {
+    grid-area: tp;
+}
+
+.hand-one-pair {
+    grid-area: sk;
+}
+
+.hand-high-card {
+    grid-area: hc;
 }
 
 @media (max-width: 400px) {
     .hands-grid {
         grid-template-columns: 1fr;
-        grid-template-areas: none;
     }
 }
-
-
 
 .hand {
     background: #fdf5e6;
