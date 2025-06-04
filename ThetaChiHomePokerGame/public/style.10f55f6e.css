@@ -245,11 +245,6 @@ footer {
     grid-area: hc;
 }
 
-@media (max-width: 800px) {
-    .hand-one-pair {
-        grid-area: op;
-    }
-
     .hands-grid {
         grid-template-areas:
             "rf sf"
