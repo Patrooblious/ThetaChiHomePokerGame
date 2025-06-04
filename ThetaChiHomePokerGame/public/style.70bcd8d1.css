@@ -193,7 +193,6 @@ footer {
             color: var(--gold);
         }
 
-/* Hand Rankings Grid */
 .hands-grid {
     display: grid;
     grid-template-areas:
@@ -216,6 +215,9 @@ footer {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
     .hand h2 {
@@ -274,7 +276,6 @@ footer {
     grid-area: hc;
 }
 
-/* Responsive */
 @media (max-width: 800px) {
     .hands-grid {
         grid-template-areas:
@@ -323,10 +324,12 @@ footer {
 
     .hand-visual img {
         width: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
-/* Typography */
 .page-gameplay h1,
 .page-house-rules h1,
 .page-etiquette h1,
