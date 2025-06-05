@@ -6,10 +6,19 @@
   Cache-Control: max-age=31536000, immutable
 
 # Global security headers
-/* 
+/*
+Everything inside this block was commented before — now it's active
+*/
+/
+/*
+  You can apply these globally using `/*` or per path
+*/
+*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer-when-downgrade
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
   Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'
-*/
