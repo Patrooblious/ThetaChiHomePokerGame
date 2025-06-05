@@ -1,5 +1,7 @@
 ﻿/* style.css */
-
+html, body {
+    height: 100%;
+}
 :root {
     --military-red: #800000;
     --gold: #FFD700;
