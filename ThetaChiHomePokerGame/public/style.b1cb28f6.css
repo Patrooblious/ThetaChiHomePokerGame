@@ -1,10 +1,15 @@
-﻿/* style.css */
-html {
+﻿html, body {
     height: 100%;
+    overscroll-behavior: none;
+}
+
+:root {
+    --military-red: #800000;
+    --gold: #FFD700;
+    --white: #FFFFFF;
 }
 
 body {
-    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,12 +17,7 @@ body {
     color: var(--military-red);
     display: flex;
     flex-direction: column;
-}
-
-:root {
-    --military-red: #800000;
-    --gold: #FFD700;
-    --white: #FFFFFF;
+    min-height: 100vh;
 }
 
 a {
@@ -120,8 +120,7 @@ nav a {
             color: var(--gold);
         }
 
-.updates,
-.download-pdf {
+.updates, .download-pdf {
     padding: 1.5rem 1rem;
     max-width: 800px;
     margin: 0 auto;
@@ -173,19 +172,16 @@ main {
         margin: 0 auto;
     }
 
-    main h2,
-    main h3 {
+    main h2, main h3 {
         color: var(--military-red);
         margin-top: 1rem;
     }
 
-ul,
-ol {
+ul, ol {
     margin-left: 1.5rem;
 }
 
-    ul li,
-    ol li {
+    ul li, ol li {
         margin-bottom: 0.5rem;
     }
 
@@ -275,12 +271,6 @@ footer {
 
     .hand-one-pair {
         grid-area: tp;
-    }
-}
-
-@media (max-width: 400px) {
-    .hands-grid {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -378,8 +368,3 @@ footer {
     .page-poker-terms ul li strong {
         font-size: 1.5rem;
     }
-
-html,
-body {
-    overscroll-behavior: none;
-}
