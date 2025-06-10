@@ -258,6 +258,8 @@ footer {
     grid-area: hc;
 }
 
+
+
 @media (max-width: 800px) {
     .hands-grid {
         grid-template-areas:
@@ -275,6 +277,12 @@ footer {
 
     .hand-one-pair {
         grid-area: tp;
+    }
+}
+
+@media (max-width: 400px) {
+    .hands-grid {
+        grid-template-columns: 1fr;
     }
 }
 
