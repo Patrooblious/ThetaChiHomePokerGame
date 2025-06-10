@@ -1,20 +1,23 @@
 ﻿/* style.css */
-html, body {
+html {
     height: 100%;
-}
-:root {
-    --military-red: #800000;
-    --gold: #FFD700;
-    --white: #FFFFFF;
 }
 
 body {
+    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background: var(--white);
     color: var(--military-red);
-    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --military-red: #800000;
+    --gold: #FFD700;
+    --white: #FFFFFF;
 }
 
 a {
@@ -117,7 +120,8 @@ nav a {
             color: var(--gold);
         }
 
-.updates, .download-pdf {
+.updates,
+.download-pdf {
     padding: 1.5rem 1rem;
     max-width: 800px;
     margin: 0 auto;
@@ -159,22 +163,29 @@ nav a {
     font-weight: bold;
 }
 
-main section {
-    padding: 1rem;
-    max-width: 900px;
-    margin: 0 auto;
+main {
+    flex: 1;
 }
 
-main h2, main h3 {
-    color: var(--military-red);
-    margin-top: 1rem;
-}
+    main section {
+        padding: 1rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
 
-ul, ol {
+    main h2,
+    main h3 {
+        color: var(--military-red);
+        margin-top: 1rem;
+    }
+
+ul,
+ol {
     margin-left: 1.5rem;
 }
 
-    ul li, ol li {
+    ul li,
+    ol li {
         margin-bottom: 0.5rem;
     }
 
@@ -246,8 +257,6 @@ footer {
 .hand-high-card {
     grid-area: hc;
 }
-
-
 
 @media (max-width: 800px) {
     .hands-grid {
