@@ -378,3 +378,8 @@ footer {
     .page-poker-terms ul li strong {
         font-size: 1.5rem;
     }
+
+html,
+body {
+    overscroll-behavior: none;
+}
