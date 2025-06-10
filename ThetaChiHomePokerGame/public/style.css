@@ -278,12 +278,6 @@ footer {
     }
 }
 
-@media (max-width: 400px) {
-    .hands-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .hand {
     background: #fdf5e6;
     border: 2px solid var(--military-red);
