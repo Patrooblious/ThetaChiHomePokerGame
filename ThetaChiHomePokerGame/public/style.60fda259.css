@@ -258,8 +258,6 @@ footer {
     grid-area: hc;
 }
 
-
-
 @media (max-width: 800px) {
     .hands-grid {
         grid-template-areas:
