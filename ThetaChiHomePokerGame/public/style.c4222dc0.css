@@ -257,13 +257,12 @@ footer {
             "fh fl"
             "ft sk"
             "tp hc";
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
     }
 
     .hand {
-        width: 80%;
+        width: 100%;
     }
-}
 
     .hand-one-pair {
         grid-area: tp;
